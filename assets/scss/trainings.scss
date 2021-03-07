@@ -1,0 +1,14 @@
+.training-section {
+    .section_title{
+        width: 100%;
+        display: block;
+        h2{
+            @include heading;
+            margin-bottom: 45px;
+            text-align: left;
+        }
+    }
+    .training_list{
+        @include card_type__two;
+    }
+}

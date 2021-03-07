@@ -1,0 +1,73 @@
+.banner {
+    background-image: url("../img/27-layers.png");
+    padding: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.section_title_one {
+    width: 100%;
+    display: block;
+    h2 {
+        width: 540px;
+        height: 107px;
+        color: $white_color;
+        font-family: $font_manrope;
+        font-size: 42px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 56px;
+        text-align: left;
+        span {
+            display: block;
+        }
+    }
+    p {
+        max-width: 100%;
+        color: $white_color;
+        font-family: $font_manrope;
+        font-size: 20px;
+        font-weight: 800;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 32px;
+        text-align: left;
+    }
+}
+
+.full_stack {
+    max-width: 60%;
+}
+
+.team_box {
+    background-color: $white_color;
+}
+
+.content-box {
+    padding-top: 50px;
+    pre {
+        max-width: 100%;
+        color: $text_color__one;
+        font-family: $font_manrope;
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 32px;
+        text-align: left;
+        padding-top: 15px
+    }
+}
+
+.development {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    background-color: #ffffff;
+}
+
+.button_last {
+    border-radius: 8px;
+    border: 2px solid $secondary_color;
+    background-color: $secondary_color;
+}

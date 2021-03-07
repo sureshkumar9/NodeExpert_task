@@ -1,0 +1,70 @@
+.technology-section{
+    background: $white_color;
+    .section_title{
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+        h2{
+            @include heading;
+            margin-bottom: 15px;
+            span{
+                display: block;
+            }
+        }
+        p{
+            font-family: $font_manrope;
+            font-size: 18px;
+            font-weight: $wt_normal;
+            color: $text_color__one;
+            line-height: 32px;
+            margin-bottom: 30px;
+        }
+    }
+    .tabs_nav{
+        .nav-tabs{
+            .nav-link{
+                color: $text_color__one;
+                font-size: 24px;
+                line-height: 32px;
+                font-family: $font_manrope;
+                border: none;
+                border-bottom: 1px solid $border_color__one;
+                font-weight: $wt_bold;
+                outline: none;
+                padding-bottom: 15px;
+                &.active{
+                    color: $secondary_color;
+                    border-bottom: 4px solid $secondary_color;
+                }
+            }
+            
+        }
+    }
+    .tab-content{
+        ul{
+            padding: 50px 0;
+            text-align: center;
+            li{
+                list-style-type: none;
+                display: inline-block;
+                padding: 10px 15px;
+                .technology_list {
+                    text-align:center;
+                    img{
+                        width: 92px;
+                        height: 92px;
+                    }
+                    p{
+                        color: $text_color__one;
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-family: $font_manrope;
+                        font-weight: 600;
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+}

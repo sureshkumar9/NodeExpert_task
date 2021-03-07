@@ -1,0 +1,93 @@
+footer{
+    background: $background_color;
+    .footer_box__one{
+        img{
+            margin-bottom: 30px;
+        }
+        p{
+            margin-bottom: 30px;
+            &.desc{
+                color: $gray_color;
+                font-family: $font_lato;
+                font-weight: $wt_normal;
+                font-size: 1rem;
+                opacity: 0.85;
+            }
+        }
+        .social-links{
+            ul{
+                padding-left: 0;
+                li{
+                    list-style-type: none;
+                    display: inline-block;
+                    margin-left: 25px;
+                }
+                li{
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .footer_box__two{
+        .quick_links{
+            h3{
+                opacity: 0.5;
+                color: $white_color;
+                font-family: $font_lato;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 20px 0;
+            }
+            ul{
+                padding-left: 0;
+                li{
+                    list-style-type: none;
+                    padding: 5px 0;
+                    a{
+                        color: $white_color;
+                        font-size: 1rem;
+                        font-weight: $wt_normal;
+                        &:hover {
+                            text-decoration: none;
+                            color: $gray_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_box__three{
+        h3{
+            opacity: 0.5;
+            color: $white_color;
+            font-family: $font_lato;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 20px 0;
+        }
+        ul{
+            padding-left: 0;
+            li{
+                list-style-type: none;
+                padding: 5px 0;
+                color: $white_color;
+                span{
+                    font-size: 1rem;
+                    font-weight: $wt_bold;
+                    color: $white_color;
+                }
+                a{
+                    color: $secondary_color;
+                    font-size: 1rem;
+                    font-weight: $wt_normal;
+                    &:hover {
+                        text-decoration: none;
+                        color: $gray_color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.video_section{
+    background: $white_color;
+    .text_container{
+        h2{
+            font-family: $font_manrope;
+            font-size: 42px;
+            font-weight: $wt_bold;
+            color: $text_color__one;
+            line-height: 56px;
+            margin-bottom: 20px;
+            span{
+                color: $secondary_color;
+            }
+        }
+        p{
+            font-family: $font_manrope;
+            font-size: 18px;
+            font-weight: $wt_normal;
+            color: $text_color__two;
+            line-height: 32px;
+            margin-bottom: 30px;
+        }
+        .cta{
+            @include button_type__three;
+            a{
+                color: $white_color;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .video_box{
+        position: relative;
+        .play_icon{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}

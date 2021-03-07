@@ -1,0 +1,99 @@
+.testimonial_box {
+    background-color: $secondary_color;
+    .section_title {
+        width: 100%;
+        display: block;
+        h2 {
+            @include heading;
+            color: $white_color;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    }
+    .arrow-quotes {
+        position: absolute;
+        right: -20px;
+        top: -95px;
+        opacity: 0.2;
+    }
+    .testimonial_content {
+        text-align: center;
+        .testimony {
+            background: $white_color;
+            box-shadow: 0 10px 25px rgba(41, 41, 42, 0.1);
+            border-radius: $border_radius__one;
+            padding: 30px;
+            margin: 30px 0px;
+            min-height: 240px;
+            h3 {
+                font-family: $font_manrope;
+                color: $primary_color;
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 14px;
+                font-weight: $wt_normal;
+                line-height: 24px;
+                color: $primary_color;
+                margin-bottom: 0;
+            }
+            &:first-child {
+                margin-right: 25px;
+            }
+        }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 20px solid $white_color;
+            position: absolute;
+            left: 47%;
+            transform: translate(-50%);
+            bottom: 21%;
+        }
+        .author {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 0;
+            .profile_img {}
+            .author_details {
+                font-family: $font_manrope;
+                color: $white_color;
+                margin-left: 15px;
+                text-align: left;
+                .name {
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-weight: 700;
+                }
+                .designation {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: 35px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        margin: 5px 7px;
+        background: transparent;
+        display: block;
+        border-radius: 30px;
+        border: 2px solid #ffffff;
+        opacity: 0.5;
+        outline: none;
+    }
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: #fdfdfd;
+        opacity: 1;
+    }
+}
