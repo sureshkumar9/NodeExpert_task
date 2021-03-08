@@ -1,0 +1,168 @@
+@mixin shadow__one{
+    box-shadow: 0 1px 0 #e5e9f2;
+}
+@mixin button_type__one {
+    background-color: $secondary_color;
+    padding: 1px 3px;
+    border-radius: $border_radius__one;
+    &:hover{
+        background: $light_background;
+    }
+}
+@mixin button_type__two {
+    background-color: $secondary_color;
+    padding: 15px 25px;
+    border-radius: $border_radius__one;
+    font-size: 20px;
+    font-weight: 700;
+    &:hover{
+        background: $light_background;
+    }
+}
+@mixin button_type__three {
+    background-color: $secondary_color;
+    padding: 15px 30px;
+    border-radius: $border_radius__one;
+    font-size: 20px;
+    font-weight: 700;
+    &:hover{
+        background: $light_background;
+    }
+}
+@mixin button_outline__one {
+    padding: 6px 20px;
+    border-radius: $border_radius__one;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $secondary_color;
+    border: 1px solid $secondary_color;
+    &:hover{
+        background: $light_background;
+        border: 1px solid $secondary_color;
+        color: $white_color;
+    }
+}
+@mixin text_style__one {
+    color: $text_color__one;
+    font-family: $font_manrope;
+    &:hover{
+        background: $light_background;
+    }
+}
+@mixin heading {
+    color: $text_color__one;
+    font-family: $font_manrope;
+    font-size: 3rem;
+    font-weight: $wt_bold;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+@mixin card_type__one {
+    .service_card{
+        background: #ffffff;
+        border-radius: $border_radius__one;
+        padding: 35px 30px;
+        box-shadow: 0px 4px 14px -7px rgba($color: #000000, $alpha: 0.5);
+        margin-bottom: 40px;
+        h3{
+            font-family: $font_manrope;
+            font-size: 20px;
+            font-weight: 700;
+            color: $text_color__one;
+            line-height: 32px;
+        }
+        p{
+            font-family: $font_manrope;
+            font-size: 14px;
+            font-weight: $wt_normal;
+            color: #969bab;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+        a{
+            &.link{
+                font-family: $font_manrope;
+                color: $secondary_color;
+                font-size: 20px;
+                font-weight: $wt_bold;
+                line-height: 30px;
+            }
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@mixin card_type__two {
+    .service_card{
+        background: #ffffff;
+        border-radius: $border_radius__one;
+        padding: 15px 20px;
+        box-shadow: 0px 4px 14px -7px rgba($color: #000000, $alpha: 0.5);
+        margin-bottom: 40px;
+        .service_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin-bottom: 15px;
+            .seats_status{
+                background: $gray_color__two;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                padding: 8px 20px;
+                font-family: $font_manrope;
+                font-size: 14px;
+                font-weight: 700;
+                position: absolute;
+                right: -20px;
+            }
+        }
+        h3{
+            font-family: $font_manrope;
+            font-size: 20px;
+            font-weight: 700;
+            color: $text_color__one;
+            line-height: 32px;
+        }
+        p{
+            font-family: $font_manrope;
+            font-size: 14px;
+            font-weight: $wt_normal;
+            color: #969bab;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+        .service_footer{
+            display:flex;
+            justify-content: space-between;
+            a{
+                &.link{
+                    font-family: $font_manrope;
+                    color: $secondary_color;
+                    font-size: 20px;
+                    font-weight: $wt_bold;
+                    line-height: 30px;
+                }
+                span{
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+    }
+}
+@mixin submit_btn {
+    button[tyoe="submit"]{
+        background-color: $secondary_color;
+        padding: 15px 30px;
+        border-radius: $border_radius__one;
+        font-size: 20px;
+        font-weight: 700;
+        &:hover{
+            background: $light_background;
+        }
+    }
+}

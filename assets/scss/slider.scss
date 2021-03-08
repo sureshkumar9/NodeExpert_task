@@ -1,0 +1,24 @@
+.banner-box{
+    width: 100%;
+    background: $white_color;
+    .caption-box{
+        @include text_style__one;
+        &:hover{
+            background: none;
+        }
+        h1{
+            font-size: 2.625rem;
+            font-weight: $wt_bold;
+            line-height: 50px;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: $wt_normal;
+            margin-bottom: 35px;
+        }
+    }
+    .img-box{
+        text-align: center;
+    }
+}

@@ -1,0 +1,28 @@
+.services-box{
+    background: #fafafa;
+    .section_title{
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+        h2{
+            @include heading;
+            span{
+                display: block;
+            }
+        }
+    }
+    .services_list{
+        width: 100%;
+        @include card_type__one;
+    }
+    .list-explore{
+        margin: 10px auto;
+        a{
+            color: $white_color;
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+}

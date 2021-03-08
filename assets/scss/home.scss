@@ -1,0 +1,52 @@
+html, body {
+    padding: 0;
+    border: 0;
+    font-family: $font_manrope;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container{
+    width: 1100px;
+    margin: $autoMargin;
+}
+.space_one{
+    padding: 60px 0;
+}
+.space_two{
+    padding: 120px 0;
+}
+.space_three{
+    padding: 0 0 60px;
+}
+.space_four{
+    padding: 120px 0 60px;
+}
+.button__one{
+    @include button_type__one;
+    a{
+        &.nav-link{
+            color: $white_color !important;
+        }
+    }
+}
+.button__two{
+    @include button_type__two;
+    a{
+        color: $white_color !important;
+    }
+}
+.button_outline{
+    @include button_outline__one;
+}
+.seat_avai_max {
+    color: $text_color__four;
+}
+.seat_avai_avg {
+    color: $text_color__three;
+}
+.seat_avai_min {
+    color: $text_color__five;
+}
