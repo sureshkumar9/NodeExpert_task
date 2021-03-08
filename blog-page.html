@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>NodeExperts - Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/assets/owl.theme.default.min.css">
+
+</head>
+
+<body class="bg-light">
+
+    <!--header-->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="logo">
+                    <a class="navbar-brand mr-lg-0" href="/"><img src="assets/img/nodeXperts_logo.svg" class="img-fluid" alt="logo"></a>
+                </div>
+                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+                <div class="navbar-collapse offcanvas-collapse menu" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Development & Consulting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Community	</a>
+                        </li>
+                        <li class="nav-item btn button__one">
+                            <a class="nav-link" href="#">Contact Us	</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--header ends-->
+
+    <!--main-->
+    <main role="main">
+        <section class="blogs">
+            <div class="container">
+                <div class="notification">
+                    <div class="row ">
+
+                        <div class="col-md-5">
+                            <img src="assets/img/arif-riyanto-vJP-wZ6hGBg-unsplash_1.png" class="rounded float-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <p>KUBERNETES DEVELOPEMENT - 5 Min Read</p>
+                            <h2>Alerting with Prometheus in Kubernetes - Beginners Guide</h2>
+                            <p>In this blog, I will cover the Alert Manager setup and its integration with Prometheus deployed on a kubernetes cluster. This architecture will be using slack, as a notification channel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog section end -->
+        <!-- artical start -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-md-8 Alertmanager">
+                        <p>Alertmanager is an open source alerting system. It handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as
+                            Slack, Email, PagerDuty, OpsGenie, etc. It also takes care of silencing and inhibition of alerts. In this blog, I will cover the Alert Manager setup and its integration with Prometheus deployed on a kubernetes cluster. This
+                            architecture will be using slack, as a notification channel. I will be showing you the installation of Prometheus and Alertmanager via helm as when i was first trying to do so, i struggled a lot as there was very little resources
+                            available on the internet. Hence this gave me motivation to write up this blog.</p>
+                        <p>The main steps involved in setting up the alerting and notifications are: Setup and configure the Alertmanager </p>
+                        <p>• Configure the alertmanager with different notifications channels.</p>
+                        <p>• Create alerting rules in Prometheus (Like if any pod is not running)</p>
+                        <h4>Architecture</h4>
+                        <p>Below is the basic architecture of alertmanager:</p>
+                        <img src="assets/img/image_7.png" class="rounded float-start" alt="...">
+                        <h3>Installation </h3>
+                        <p>If you install stable/prometheus helm chart, alertmanager is also installed with it.</p>
+                        <img src="assets/img/image_8.png" class="rounded float-start" alt="...">
+                        <h3>Setting up Slack Alerts</h3>
+                        <p>The first thing you need to do is be a part of the slack workspace. The Alertmanager uses the Incoming Webhooks feature of Slack, so first we need to set that up. Go to Slack -> Administration -> Manage apps.</p>
+                        <img src="assets/img/image_9.png" class="rounded float-start" alt="...">
+                        <p>Manage -> Custom Integrations -> Incoming Webhooks</p>
+                        <img src="assets/img/image_10.png" class="rounded float-start" alt="...">
+                        <p>Here you need to add the channel for receiving the alerts. After you confirm and add Incoming WebHooks integration, webhook URL (which is your Slack api_url) is displayed. </p>
+                        <img src="assets/img/image_11.png" class="rounded float-start" alt="...">
+                        <p>Now copy the webhook url, this is your Slack api_url which will be used in the configmap of alertmanager.</p>
+                        <h3>Alertmanager Setup </h3>
+                        <p>Changes are to made in the configmaps of alertmanager to configure it with slack. We need to edit the alertmanger.yml file. Step 1: View the alertmanager configmap.</p>
+                        <img src="assets/img/image_12.png" class="rounded float-start" alt="...">
+                        <p>Step 2: Store the alertmanager configmap on local. We can even directly edit the configmap file or the best approach is to save the cm(configmap) on local and then edit it using vs code or any text editor.</p>
+                        <img src="assets/img/image_13.png" class="rounded float-start" alt="...">
+                        <p>Step 3: Edit the alertmanager.yml file • Various alertmanager receivers can be integrated such as email, slack, PagerDuty, OpsGenie, etc. • Below is the setup for slack, edit the configmap accordingly </p>
+                        <img src="assets/img/image_14.png" class="rounded float-start" alt="...">
+                        <p>Step 4: Apply the configmap manifest file</p>
+                        <img src="assets/img/image_15.png" class="rounded float-start" alt="...">
+                        <p>Step 5: Validate the configmap</p>
+                        <img src="assets/img/image_16.png" class="rounded float-start" alt="...">
+                        <h3>Alerting Rules file in Prometheus</h3>
+                        <p>Alerting rules can be set in the configmap of prometheus-server. Step 1: Store the cm on your local</p>
+                        <img src="assets/img/image_17.png" class="rounded float-start" alt="...">
+                        <p>Step 2: Add the rules in alerting_rules.yml file</p>
+                        <img src="assets/img/image_18.png" class="rounded float-start" alt="...">
+                        <p>Step 3: Apply the prometheus-server configmap manifest file</p>
+                        <img src="assets/img/image_19.png" class="rounded float-start" alt="...">
+                        <h2>Relax and just check your Slack Channel</h2>
+                        <img src="assets/img/image_20.png" class="rounded float-start" alt="...">
+                        <p>Here you go, now you are all set to get notified via the firing alerts in slack, till then relax !! </p>
+                    </div>
+
+                    <div class="col-md-4  Alertmanager">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>In this article:</h5>
+                                <ul>
+                                    <li>
+                                        <a href="/">
+                                            <p>Node.js Consulting & Development Services</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Full-Stack JavaScript Trainings</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Why Develop with Node.js?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Node.js Consulting & Development Services</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Full-Stack JavaScript Trainings</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Why Develop with Node.js?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <p>Why Develop with Node.js?</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--form and faqs section-->
+        <section class="gen_section space_one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form_box">
+                            <h2>Get In Touch</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Ex. John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Ex. 9876543210">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email">Email</label>
+                                            <input type="text" class="form-control" id="email" name="email" placeholder="Ex. abc@xyz.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Message</label>
+                                    <textarea class="form-control" id="message" Name="message" rows="4" placeholder="Please leave a message if any"></textarea>
+                                </div>
+                                <button type="submit" class="btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--col-md-6-->
+                    <div class="col-md-6">
+                        <div class="item">
+                            <div class="case_box">
+                                <h3>How Can We Help ?</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      What are our capability?
+                    </a>
+                                    </h4>
+
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Get Inspired
+                    </a>
+                                    </h4>
+
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Become a partner
+                    </a>
+                                    </h4>
+
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">Lorem ipsum dolor sit amet consectetur adipisicing. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--row-->
+            </div>
+            <!--container-->
+        </section>
+        <!--form and faqs section ends-->
+
+
+    </main>
+    <!--main ends-->
+
+    <!--footer-->
+    <footer class="space_one">
+        <div class="container">
+            <div class="row">
+                <!--col one-->
+                <div class="col-md-3">
+                    <div class="footer_box__one">
+                        <img src="assets/img/nodeXperts_logo_white.svg" class="img-fluid" alt="logo">
+                        <p class="desc">NodeXperts is a global technology and business solutions, consulting, and software development provider </p>
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="assets/img/instagram.svg" class="img-fluid" alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/img/youtube.svg" class="img-fluid" alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/img/facebook.svg" class="img-fluid" alt="instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--col-md-3 ends-->
+                <!--col two-->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4 footer_box__two">
+                            <div class="quick_links">
+                                <h3>Quick Links</h3>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Community</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--col-md-4-->
+                        <div class="col-md-4 footer_box__two">
+                            <div class="quick_links">
+                                <h3>Community</h3>
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Solutions</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Press</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--col-md-4-->
+                        <div class="col-md-4 footer_box__two">
+                            <div class="quick_links">
+                                <h3>Industries</h3>
+                                <ul>
+                                    <li><a href="#">AgriTech</a></li>
+                                    <li><a href="#">E-commerce</a></li>
+                                    <li><a href="#">Fintech</a></li>
+                                    <li><a href="#">ISVs</a></li>
+                                    <li><a href="#">Laws</a></li>
+                                    <li><a href="#">Logistics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--col-md-4-->
+                    </div>
+                    <!--row-->
+                </div>
+                <!--col-md-6-->
+                <!--col three-->
+                <div class="col-md-3">
+                    <div class="footer_box__three">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><span>E. </span><a href="mailto:hello@nodexperts.com">hello@nodexperts.com</a></li>
+                            <li><span>P. </span><a href="tel:+91-8527152308">+91-8527152308</a></li>
+                            <li><span>A. </span>E-29, Sector-11, Noida, 201301, INDIA</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--col-md-3 ends-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </footer>
+    <!--footer ends-->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/jquery-3.5.1.slim.min.js"><\/script>')
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

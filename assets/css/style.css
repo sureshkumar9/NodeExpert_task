@@ -749,21 +749,6 @@ footer .footer_box__three ul li a:hover {
   height: calc(1.5em + .75rem + 12px);
 }
 
-@media screen and (max-width: 991px) {
-  .container {
-    width: 100%;
-  }
-
-  header .navbar {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  .menu .navbar-nav li {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-}
 .banner {
   background-image: url("../img/27-layers.png");
   padding: 100px;
@@ -836,6 +821,156 @@ footer .footer_box__three ul li a:hover {
   border-radius: 8px;
   border: 2px solid #80bf43;
   background-color: #80bf43;
+}
+
+.blog {
+  background-color: #80bf43;
+}
+.blog .notification {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.blog .notification p {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: left;
+  width: 100%;
+}
+.blog .notification h2 {
+  width: 100%;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 56px;
+  text-align: left;
+}
+
+.latest_Blos {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.newsletter {
+  text-align: center;
+  margin: 30px;
+}
+
+.bg_color {
+  background-color: #80bf43;
+}
+.bg_color p {
+  color: #ffffff;
+}
+.bg_color p span {
+  display: block;
+}
+.bg_color a {
+  color: #80bf43;
+  background-color: white;
+}
+
+.cardone {
+  margin-top: 65px;
+}
+
+.text_place {
+  text-align: start;
+}
+
+.first_paragraph {
+  text-align: start;
+}
+.first_paragraph input {
+  border: none;
+  background-color: #80bf43;
+  color: wheat;
+}
+
+.Tutorials {
+  width: fit-content;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  height: max-content;
+}
+
+.missing {
+  background-color: #ffffff;
+}
+.missing .unsplassh {
+  margin: 2.6%;
+}
+
+::placeholder {
+  color: white;
+  font-size: small;
+}
+
+.topic {
+  color: #80bf43;
+}
+
+#newsletterone {
+  margin: 30px;
+}
+
+.blogs {
+  background-image: url("../img/4-layers.png");
+}
+.blogs .notification {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.blogs .notification p {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: left;
+  width: 100%;
+}
+.blogs .notification h2 {
+  width: 100%;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 56px;
+  text-align: left;
+}
+
+.Alertmanager {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+
+  header .navbar {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .menu .navbar-nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
